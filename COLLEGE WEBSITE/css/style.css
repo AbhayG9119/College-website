@@ -1,12 +1,124 @@
 /* General Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: Arial, sans-serif; line-height: 1.6; }
+marquee{
+  margin-top: 1px;
+  font-size: 1.3em;
+  background-color: rgb(239, 163, 22);
+}
 
 /* Header */
-header { background: #003366; color: white; padding: 15px; }
-header h1 { margin: 0; font-size: 24px; }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Navbar */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    width: 100%;
+    background: #003366;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Simple Footer */
+footer {
+  background: #2c3e50;   /* Dark navy background */
+  color: #f8f9fa;        /* Light text */
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 40px;
+  border-top: 2px solid #f39c12;  /* Highlighted border */
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effect on Footer */
+footer:hover {
+  background: #34495e;   /* Slightly lighter on hover */
+  transition: 0.4s;
+}
+
+
+/* Page ke content ke liye top space (navbar fixed hai) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 70px;
+}
+
 
 /* Slider */
 .hero { position: relative; overflow: hidden; height: 400px; }
@@ -22,8 +134,6 @@ nav a { color: white; text-decoration: none; font-weight: bold; }
 .notices ul { list-style: none; }
 .notices li { padding: 10px; border-bottom: 1px solid #ddd; }
 
-/* Footer */
-footer { background: #003366; color: white; text-align: center; padding: 15px; margin-top: 30px; }
 
 /* Responsive */
 @media(max-width: 768px) {
@@ -31,4 +141,8 @@ footer { background: #003366; color: white; text-align: center; padding: 15px; m
   .hero { height: 250px; }
   .slide img { height: 250px; }
 }
+
+
+
+
 

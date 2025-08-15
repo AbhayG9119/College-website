@@ -1,113 +1,85 @@
-/* Reset */
-* {
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;   /* 👈 navbar fix */
+  top: 0;            /* top par chipka hua */
+  left: 0;
+  width: 100%;       /* full screen width */
+  z-index: 1000;    
+}
+
+/* Logo + Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+/* Nav links */
+nav ul {
+  list-style: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: #f4f6f9;
-  color: #333;
+nav ul li {
+  margin-left: 20px;
 }
 
-/* Header (top bar) */
-header {
-  width: 100%;
-  background: #004080;
-  color: #fff;
-  padding: 15px 20px;
-  font-size: 1.4rem;
+nav ul li a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  transition: color 0.3s;
 }
 
-/* Main container (sidebar + content) */
-.main {
-  display: flex;
-  flex: 1;
-  margin-top: 60px; /* header ke niche space */
-}
-
-/* Sidebar */
-.sidebar {
-  width: 220px;
-  background: #002147;
-  color: #fff;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 20px 10px;
-  height: calc(100vh - 60px); /* header ke baad */
-  position: fixed;
-  top: 60px;
-  left: 0;
-  overflow-y: auto;
-}
-
-.sidebar h2 {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+nav ul li a:hover {
   color: #ffcc00;
 }
 
-.sidebar a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 12px 15px;
-  border-radius: 6px;
-  margin: 5px 0;
-  transition: 0.3s;
+/* Hamburger icon (hidden by default on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
-.sidebar a:hover,
-.sidebar a.active {
-  background: #ffcc00;
-  color: #002147;
-  font-weight: bold;
-}
-
-/* Content area */
-.content {
-  margin-left: 220px; /* sidebar ke liye space */
-  flex: 1;
-  padding: 20px;
-}
-
-/* Footer */
-footer {
-  width: 100%;
-  background: #004080;
-  color: #fff;
-  padding: 15px;
-  text-align: center;
-  font-size: 0.9rem;
-  position: relative;
-  margin-top: auto;
-}
-
-/* Responsive */
+/* Responsive for mobile */
 @media (max-width: 768px) {
-  .sidebar {
-    position: relative;
+  nav {
+    display: none;
     width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    top: 0;
+    background: #003366;
   }
 
-  .content {
-    margin-left: 0;
-    margin-top: 10px;
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }

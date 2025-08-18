@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Sw. Narendra Singh Mahavidyalaya</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+</head>
+ 
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo-title">
+      <img src="images/logo2.png" alt="College Logo" class="logo">
+      <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" data-link>Home</a></li>
+      <li><a href="about.html" class="active" data-link>About</a></li>
+      <li><a href="courses.html" data-link>Courses</a></li>
+      <li><a href="gallery.html" data-link>Gallery</a></li>
+      <li><a href="contact.html" data-link>Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <!-- Navbar end -->
+    <h4 class="sectionHeader">Contact us</h4>
+   <div class="hero-img">
+    <img src="images/contact.jpg" alt="College Campus">
+  </div>
+  <section>
+   
+    <h1 class="heading">Get in touch</h1>
+    <p class="sub-heading"> Whether you're a prospective student, parent, alumni, or partner — feel free to reach out with your queries. Our team will get back to you as soon as possible.</p>
+
+    <div class="contactForm">
+      <form id="contactForm" action="https://script.google.com/macros/s/AKfycbx1UkjWyLmQZDQEXzxvb4GBd99Ve0qF4sLnjnTSQ3ye6IGID4vTr196iK48HS0bLXy1/exec" method="POST">
+        <h1 class="sub-heading">Need Support!</h1>
+        <p class="para para2">
+          Contact us for a quote, help to join the them.
+        </p>
+        <!-- Inputs -->
+          <input type="text" name="name" class="input" placeholder="Your Name">
+          <input type="email" name="email" class="input" placeholder="Your Email">
+          <input type="text" name="subject" class="input" placeholder="Your Subject">
+          <textarea name="message" class="input" cols="30" rows="5" placeholder="Write your message..."></textarea>
+          <input type="submit" class="input submit" value="Send Message">
+
+      </form>
+      <div class="map-container">
+        <div class="mapBg"></div>
+        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.2049888356514!2d80.0560435!3d26.2874539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399db3fc522422c3%3A0x8dd9a8b4722e2a36!2sSw.%20NARENDRA%20SINGH%20MAHAVIDYALAYA%20GAJNER%20KANPUR%20DEHAT!5e0!3m2!1sen!2sin!4v1755493730135!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="contactMethod">
+      <div class="method">
+        <i class="fa-solid fa-location-dot contactIcon"></i>
+        <article class="text">
+          <h1 class="sub-heading"> Location</h1>
+          <p class="para">73P4+XCM, Gajner, Uttar Pradesh 209121</p>
+        </article>
+      </div>
+      
+      <div class="method">
+        <i class="fa-solid fa-envelope contactIcon"></i>
+        <article class="text">
+          <h1 class="sub-heading"> Email</h1>
+          <p class="para">abhay.g@bestinfosystems.co.in</p>
+        </article>
+      </div>
+      <div class="method">
+        <i class="fa-solid fa-phone contactIcon"></i>
+        <article class="text">
+          <h1 class="sub-heading"> Phone</h1>
+          <p class="para">+91 XXXXXXXXXX</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Sw. Narendra Singh Mahavidyalaya, All Rights Reserved.</p>
+  </footer>
+</body>
+<script>
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    fetch(form.action, { method: "POST", body: new FormData(form)})
+      .then(res => res.text())
+      .then(data => {
+        alert("✅ Your message has been sent successfully!");
+        form.reset();
+      })
+      .catch(err => alert("❌ Something went wrong. Try again!"));
+  });
+</script>
+</html>

@@ -1,4 +1,4 @@
-/* About Us Banner *
+/* About Us Banner */
 .about-hero {
   text-align: center;
   padding: 80px 20px;
@@ -9,7 +9,7 @@
   margin-bottom: 10px;
 }
 
-/* Principal Section *
+/* Principal Section */
 .principal-message {
   display: flex;
   align-items: center;
@@ -29,7 +29,7 @@
   max-width: 600px;
 }
 
-/* Mission & Vision *
+/* Mission & Vision */
 .mission-vision {
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-/* Highlights *
+/* Highlights */
 .highlights {
   padding: 50px 10%;
   text-align: center;
@@ -68,7 +68,7 @@
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   font-weight: 500;
 }
-/* General Section Style *
+/* General Section Style */
 .about-section {
   background: #fff;
   border-radius: 12px;
@@ -79,22 +79,22 @@
   cursor: pointer;
 }
 
-/* Hover Effect *
+/* Hover Effect */
 .mission-vision .card:hover {
-  transform: translateY(-8px);          /* upar uthta hua effect *
+  transform: translateY(-8px);          /* upar uthta hua effect */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   background: lightblue;
 }
 
-/* Heading hover color *
+/* Heading hover color */
 .highlight-card:hover {
-  /* color: #004aad;    college blue shade *
+  color: #004aad;   /* college blue shade */
   background-color:lightblue;
   transition: color 0.3s ease;
 }
 
-/* Paragraph hover slight fade 
+/* Paragraph hover slight fade */
 .about-section:hover p {
   opacity: 0.9;
   transition: opacity 0.3s ease;
- } */
+}

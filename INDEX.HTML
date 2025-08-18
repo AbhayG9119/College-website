@@ -16,26 +16,21 @@
       <h1>Sw. Narendra Singh Mahavidyalaya</h1>
     </div>
     <ul class="menu" id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="free-courses.html">Free Courses</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-
+      <li><a href="index.html" data-link>Home</a></li>
+      <li><a href="about.html" class="active" data-link>About</a></li>
+      <li><a href="courses.html" data-link>Courses</a></li>
+      <li><a href="gallery.html" data-link>Gallery</a></li>
+      <li><a href="contact.html" data-link>Contact</a></li>
     </ul>
     <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
       <span></span><span></span><span></span>
     </div>
   </nav>
   <!-- Top News Header -->
-  <marquee id="headquote"> Education is the key to success, and at Sw. Narendra Singh Mahavidyalaya we unlock every
+  <marquee class="headquote"> Education is the key to success, and at Sw. Narendra Singh Mahavidyalaya we unlock every
     student’s potential.</marquee>
 
-  <!-- Header -->
-  <header id="header">
 
-  </header>
 
   <!-- Hero Slider -->
   <div class="hero-img">
@@ -101,17 +96,6 @@
 
     toggle.addEventListener('click', () => {
       menu.classList.toggle('active');
-    });
-    document.addEventListener("DOMContentLoaded", () => {
-      const currentPage = window.location.pathname.split("/").pop();
-
-      document.querySelectorAll(".menu a").forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-          link.classList.add("active");
-        } else {
-          link.classList.remove("active");
-        }
-      });
     });
   </script>
 </body>

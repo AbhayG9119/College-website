@@ -1,25 +1,34 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | Sw. Narendra Singh Mahavidyalaya</title>
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background: #f8f9fa;
     }
+
     header {
       background: #fff;
-      color: black;
+      color: #2c3e50;
       text-align: center;
       padding: 80px 15px;
     }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
+    }
+
+    nav .menu a.active {
+      background: #003366;
+      color: #f0d466;
+      font-weight: 500;
     }
 
     .gallery {
@@ -36,7 +45,7 @@
       height: 220px;
       object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
       cursor: pointer;
     }
@@ -50,19 +59,22 @@
       display: none;
       position: fixed;
       z-index: 1000;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.9);
+      background: rgba(0, 0, 0, 0.9);
       justify-content: center;
       align-items: center;
     }
+
     .lightbox img {
       max-width: 90%;
       max-height: 80%;
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
+
     .lightbox span {
       position: absolute;
       top: 20px;
@@ -82,10 +94,13 @@
     }
 
     @media(max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
+      header h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <nav>
     <div class="logo-title">
@@ -93,11 +108,12 @@
       <h1>Sw. Narendra Singh Mahavidyalaya</h1>
     </div>
     <ul class="menu" id="menu">
-      <li><a href="index.html" data-link>Home</a></li>
-      <li><a href="about.html" class="active" data-link>About</a></li>
-      <li><a href="courses.html" data-link>Courses</a></li>
-      <li><a href="gallery.html" data-link>Gallery</a></li>
-      <li><a href="contact.html" data-link>Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="free-courses.html">Free Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
       <span></span><span></span><span></span>
@@ -144,7 +160,19 @@
     function closeLightbox() {
       lightbox.style.display = "none";
     }
+    document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".menu a").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
   </script>
 
 </body>
+
 </html>

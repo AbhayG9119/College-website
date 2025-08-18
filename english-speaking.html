@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Speaking Course - Sw. Narendra Singh Mahavidyalaya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        .course-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: introFade 1.2s ease-out forwards;
+        }
+
+        .course-container h1 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            background: #ddd;
+            border-radius: 20px;
+            height: 20px;
+            margin: 20px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #003366, #0077cc);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+            border-radius: 20px;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
+            line-height: 20px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+        }
+
+        .section h2 {
+            color: #fff;
+            background: #003366;
+            margin: 0;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .section h2:hover {
+            background: #0055aa;
+        }
+
+        .content {
+            padding: 0 15px;
+            max-height: 0;
+            overflow: hidden;
+            background: #f9f9f9;
+            transition: max-height 0.6s ease-in-out, padding 0.3s, opacity 0.4s;
+            opacity: 0;
+        }
+
+        .content.open {
+            padding: 15px;
+            max-height: 600px;
+            opacity: 1;
+            animation: fadeSlide 0.6s ease-in-out;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            background: #eef3ff;
+            margin: 6px 0;
+            padding: 10px;
+            border-radius: 6px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes introFade {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .course-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo-title">
+            <img src="images/logo2.png" alt="College Logo" class="logo">
+            <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="free-courses.html">Free Courses</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="course-container">
+        <h1>English Speaking Course</h1>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+            <div class="progress-text" id="progress-text">0% Completed</div>
+        </div>
+
+        <div class="section">
+            <h2>About the Course</h2>
+            <div class="content open">
+                <p>
+                    This English Speaking Course is designed to help learners develop strong communication skills,
+                    improve fluency, and gain confidence in both professional and everyday conversations.
+                    The course covers grammar, vocabulary, pronunciation, and practical usage of the language.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Course Highlights</h2>
+            <div class="content">
+                <ul>
+                    <li>Improve fluency and pronunciation</li>
+                    <li>Learn professional vocabulary</li>
+                    <li>Interactive speaking practice sessions</li>
+                    <li>Group discussions and role plays</li>
+                    <li>Business communication skills</li>
+                    <li>Confidence building activities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Who Should Join?</h2>
+            <div class="content">
+                <p>
+                    This course is ideal for students, professionals, job seekers, and anyone who wants to enhance
+                    their English communication skills for personal or professional growth.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Duration & Mode</h2>
+            <div class="content">
+                <ul>
+                    <li>Duration: 3 Months</li>
+                    <li>Mode: Online / Offline</li>
+                    <li>Flexible timings available</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll(".section h2");
+        const contents = document.querySelectorAll(".content");
+        const progressBar = document.getElementById("progress-bar");
+        const progressText = document.getElementById("progress-text");
+
+        function updateProgress() {
+            const opened = document.querySelectorAll(".content.open").length;
+            const total = contents.length;
+            const progress = Math.round((opened / total) * 100);
+            progressBar.style.width = progress + "%";
+            progressText.textContent = progress + "% Completed";
+        }
+
+        // By default first section open → update progress
+        updateProgress();
+
+        sections.forEach(section => {
+            section.addEventListener("click", () => {
+                const content = section.nextElementSibling;
+
+                // Close others
+                contents.forEach(c => {
+                    if (c !== content) c.classList.remove("open");
+                });
+
+                // Toggle current
+                content.classList.toggle("open");
+
+                updateProgress();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

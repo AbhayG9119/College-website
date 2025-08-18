@@ -18,11 +18,12 @@
       <h1>Sw. Narendra Singh Mahavidyalaya</h1>
     </div>
     <ul class="menu" id="menu">
-      <li><a href="index.html" data-link>Home</a></li>
-      <li><a href="about.html" class="active" data-link>About</a></li>
-      <li><a href="courses.html" data-link>Courses</a></li>
-      <li><a href="gallery.html" data-link>Gallery</a></li>
-      <li><a href="contact.html" data-link>Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="free-courses.html">Free Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
       <span></span><span></span><span></span>
@@ -97,7 +98,19 @@
    <footer>
     <p>© 2025 Sw. Narendra Singh Mahavidyalaya, All Rights Reserved.</p>
   </footer>
-<script src="js/common.js"></script>
+<script src="js/common.js">
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop();
+
+    document.querySelectorAll(".menu a").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
 </body>
 
 </html>

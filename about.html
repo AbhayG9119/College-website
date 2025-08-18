@@ -1,149 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Sw. Narendra Singh Mahavidyalaya</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
 
 </head>
 <style>
   body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 80px;
-  line-height: 1.6;
-  background: #f5f7fa;
-}
-
-/* Header */
-header {
-  background: #f5f7fa;
-  color: black;
-  text-align: center;
-  padding: 20px 15px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-
-/* About section */
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 60px;
-}
-
-.about-section img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-.about-section img:hover {
-  transform: scale(1.05);
-}
-
-.about-text h2 {
-  font-size: 2rem;
-  color: #003366;
-  margin-bottom: 15px;
-}
-
-.about-text p {
-  text-align: justify;
-  margin-bottom: 12px;
-}
-
-/* Mission & Vision */
-.mission-vision {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.card h3 {
-  color: #003366;
-  margin-bottom: 15px;
-}
-
-/* Core Values */
-.values {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.values h2 {
-  color: #003366;
-  margin-bottom: 20px;
-}
-
-.values ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  list-style: none;
-  padding: 0;
-}
-
-.values li {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
-}
-
-.values li:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background: #003366;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Responsive */
-@media(max-width: 900px) {
-
-  .about-section,
-  .mission-vision,
-  .values ul {
-    grid-template-columns: 1fr;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f7fa;
   }
-}
+
+  /* Header */
+  header {
+    background: #f5f7fa;
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 70px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  nav .menu a.active {
+    background: #003366;
+      color: #f0d466;
+    font-weight: 500;
+  }
+
+  /* About section */
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .about-section img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+
+  .about-section img:hover {
+    transform: scale(1.05);
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    text-align: justify;
+    margin-bottom: 12px;
+  }
+
+  /* Mission & Vision */
+  .mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .card h3 {
+    color: #003366;
+    margin-bottom: 15px;
+  }
+
+  /* Core Values */
+  .values {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .values h2 {
+    color: #003366;
+    margin-bottom: 20px;
+  }
+
+  .values ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .values li {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+  }
+
+  .values li:hover {
+    transform: scale(1.05);
+  }
+
+  /* Footer */
+  footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* Responsive */
+  @media(max-width: 900px) {
+
+    .about-section,
+    .mission-vision,
+    .values ul {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
+
 <body>
   <!-- NAVBAR -->
   <nav>
@@ -152,16 +160,17 @@ footer {
       <h1>Sw. Narendra Singh Mahavidyalaya</h1>
     </div>
     <ul class="menu" id="menu">
-      <li><a href="index.html" data-link>Home</a></li>
-      <li><a href="about.html" class="active" data-link>About</a></li>
-      <li><a href="courses.html" data-link>Courses</a></li>
-      <li><a href="gallery.html" data-link>Gallery</a></li>
-      <li><a href="contact.html" data-link>Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="free-courses.html">Free Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
       <span></span><span></span><span></span>
     </div>
-  </nav>  
+  </nav>
 
   <header>
     <h1>About Us</h1>
@@ -173,11 +182,14 @@ footer {
       <div class="about-text">
         <h2>Welcome to Our College</h2>
         <p>
-          Swargiya Narendra Singh Mahavidyalaya is a premier institution dedicated to academic excellence, cultural enrichment, and holistic student development. 
-          Established with the vision of empowering rural and urban youth, the college provides quality education across diverse disciplines.
+          Swargiya Narendra Singh Mahavidyalaya is a premier institution dedicated to academic excellence, cultural
+          enrichment, and holistic student development.
+          Established with the vision of empowering rural and urban youth, the college provides quality education across
+          diverse disciplines.
         </p>
         <p>
-          With state-of-the-art infrastructure, experienced faculty, and a student-friendly environment, we aim to create leaders, innovators, and responsible citizens of tomorrow.
+          With state-of-the-art infrastructure, experienced faculty, and a student-friendly environment, we aim to
+          create leaders, innovators, and responsible citizens of tomorrow.
         </p>
       </div>
       <img src="college-building.jpg" alt="College Building">
@@ -188,13 +200,15 @@ footer {
       <div class="card">
         <h3>Our Mission</h3>
         <p>
-          To impart quality education that blends academic learning with real-world applications, fostering intellectual growth, moral values, and a spirit of social responsibility among students.
+          To impart quality education that blends academic learning with real-world applications, fostering intellectual
+          growth, moral values, and a spirit of social responsibility among students.
         </p>
       </div>
       <div class="card">
         <h3>Our Vision</h3>
         <p>
-          To be recognized as a center of excellence in higher education, nurturing talent and promoting innovation while contributing to the nation’s progress and development.
+          To be recognized as a center of excellence in higher education, nurturing talent and promoting innovation
+          while contributing to the nation’s progress and development.
         </p>
       </div>
     </div>
@@ -213,29 +227,41 @@ footer {
     </div>
   </div>
 
-   <footer>
+  <footer>
     <p>© 2025 Sw. Narendra Singh Mahavidyalaya, All Rights Reserved.</p>
   </footer>
   <script src="js/common.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const historyText = `
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const historyText = `
     Established in 1990, Sw. Narendra Singh Mahavidyalaya has been a centre of academic excellence in Kanpur Dehat.
     With a vision to nurture young minds, our institution emphasizes holistic education, quality teaching, and
     community engagement.
   `;
-  document.getElementById("college-history").textContent = historyText;
+      document.getElementById("college-history").textContent = historyText;
 
-  document.getElementById("mission-text").textContent =
-    "To empower students through inclusive education, practical learning experiences, and moral values.";
+      document.getElementById("mission-text").textContent =
+        "To empower students through inclusive education, practical learning experiences, and moral values.";
 
-  document.getElementById("vision-text").textContent =
-    "To become a leading regional institution recognized for academic innovation, student development, and social impact.";
+      document.getElementById("vision-text").textContent =
+        "To become a leading regional institution recognized for academic innovation, student development, and social impact.";
 
-  document.getElementById("principal-text").textContent =
-    "I warmly welcome you to Sw. Narendra Singh Mahavidyalaya. Our college fosters a culture of respect, scholarship and growth. Together, we strive to create responsible citizens of tomorrow.";
-});
+      document.getElementById("principal-text").textContent =
+        "I warmly welcome you to Sw. Narendra Singh Mahavidyalaya. Our college fosters a culture of respect, scholarship and growth. Together, we strive to create responsible citizens of tomorrow.";
+    });
 
-</script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentPage = window.location.pathname.split("/").pop();
+
+      document.querySelectorAll(".menu a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>

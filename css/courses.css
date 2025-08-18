@@ -1,9 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 80px;
-  line-height: 1.6;
+  min-height: 100vh; /* pura screen cover kare */
+  display: flex;
+  flex-direction: column;
   background: #f5f7fa;
+}
+
+nav .menu a.active {
+  background: #003366;
+      color: #f0d466;;
+  font-weight: 500;
 }
 
 .courses-container {
@@ -15,9 +22,10 @@ body {
 
 .page-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: #2c3e50;
+  margin-top: 40px;
 }
 
 .intro-text {
@@ -32,7 +40,7 @@ body {
   align-items: flex-start;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   overflow: hidden;
   transition: transform 0.3s ease;

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sw. Narendra Singh Mahavidyalaya</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <!-- NAVBAR -->
+  <nav>
+    <div class="logo-title">
+      <img src="images/logo2.png" alt="College Logo" class="logo">
+      <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" data-link>Home</a></li>
+      <li><a href="about.html" class="active" data-link>About</a></li>
+      <li><a href="courses.html" data-link>Courses</a></li>
+      <li><a href="gallery.html" data-link>Gallery</a></li>
+      <li><a href="contact.html" data-link>Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <!-- Top News Header -->
+   <marquee id="headquote"> Education is the key to success, and at Sw. Narendra Singh Mahavidyalaya we unlock every
+    student’s potential.</marquee>
+
+  <!-- Header -->
+  <header id="header">
+
+  </header>
+
+  <!-- Hero Slider -->
+  <div class="hero-img">
+    <img src="images/slider1.png" alt="College Campus">
+  </div>
+
+  <!-- Main Content -->
+  <div class="container margin-top-50 main-sections">
+    <!-- Latest News -->
+    <div class="card">
+      <div class="heading-sect">
+        <h3 class="head-title">Latest News</h3>
+      </div>
+      <marquee  direction="up" scrollamount="3">
+        <ul class="latest-news-ul">
+          <li>Admissions 2025 last date: 25 Aug. <img src="images/new.gif"></li>
+          <li>B.A., B.Sc., B.Ed. classes start: 1 Sept. <img src="images/new.gif"></li>
+          <li>Orientation Program: 3 Sept. <img src="images/new.gif"></li>
+          <li>Library renovation completed. <img src="images/new.gif"></li>
+          <li>Scholarship forms till 15 Sept. <img src="images/new.gif"></li>
+          <li>NSS enrollment starts 20 Aug. <img src="images/new.gif"></li>
+          <li>Annual Sports Meet in Oct. <img src="images/new.gif"></li>
+          <li>Internal Exams in Nov. <img src="images/new.gif"></li>
+        </ul>
+      </marquee>
+    </div>
+
+    <!-- Upcoming Events -->
+    <div class="card">
+      <div class="heading-sect">
+        <h3 class="head-title">Upcoming Events</h3>
+      </div>
+      <ul class="upcoming-event-list">
+        <li><span class="event-date">24 <br> Sep</span> Seminar on B.Sc courses</li>
+        <li><span class="event-date">26 <br> Sep</span> Seminar on B.A courses</li>
+        <li><span class="event-date">28 <br> Sep</span> Seminar on B.Ed courses</li>
+        <li><span class="event-date">28 <br> Oct</span> 2nd Convocation Ceremony</li>
+      </ul>
+    </div>
+
+    <!-- Notice Board -->
+    <div class="card">
+      <div class="heading-sect">
+        <h3 class="head-title">Notice Board</h3>
+      </div>
+      <ul class="notice-board-list">
+        <li><img src="images/notice-board-img.png"> Admissions 2025 – Last Date: 25th August 2025</li>
+        <li><img src="images/notice-board-img.png"> Regular Classes start 1st September 2025</li>
+        <li><img src="images/notice-board-img.png"> Renovated Library facilities open now</li>
+        <li><img src="images/notice-board-img.png"> Internal Exams scheduled in November</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sw. Narendra Singh Mahavidyalaya, All Rights Reserved.</p>
+  </footer>
+<!-- <script src="js/common.js"></script> -->
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+</body>
+</html>

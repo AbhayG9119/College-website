@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Sw. Narendra Singh Mahavidyalaya</title>
+    <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    header {
+      background: #fff;
+      color: black;
+      text-align: center;
+      padding: 80px 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .lightbox span {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    @media(max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo-title">
+      <img src="images/logo2.png" alt="College Logo" class="logo">
+      <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" data-link>Home</a></li>
+      <li><a href="about.html" class="active" data-link>About</a></li>
+      <li><a href="courses.html" data-link>Courses</a></li>
+      <li><a href="gallery.html" data-link>Gallery</a></li>
+      <li><a href="contact.html" data-link>Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <header>
+    <h1>Our College Gallery</h1>
+    <p>Memorable moments from our campus</p>
+  </header>
+
+  <div class="gallery">
+    <img src="images/g1.jpg" alt="Campus View">
+    <img src="images/g2.jpg" alt="Science Lab">
+    <img src="images/g3.jpg" alt="Sports Event">
+    <img src="images/g4.jpg" alt="Cultural Program">
+    <img src="images/g5.jpg" alt="Library">
+    <img src="images/g6.jpg" alt="Students Activity">
+    <img src="images/g7.jpg" alt="Seminar Hall">
+    <img src="images/g8.jpg" alt="Annual Day">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <footer>
+    &copy; 2025 Swargiya Narendra Singh Mahavidyalaya. All Rights Reserved.
+  </footer>
+
+  <script>
+    const galleryImages = document.querySelectorAll(".gallery img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

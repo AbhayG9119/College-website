@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Basics Course | Sw. Narendra Singh Mahavidyalaya</title>
+    <title>Digital Literacy Course | Sw. Narendra Singh Mahavidyalaya</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
@@ -58,7 +58,7 @@
 
         /* Levels Section */
         .levels {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 60px auto;
             padding: 0 20px;
         }
@@ -81,7 +81,7 @@
 
         .level h2 {
             color: #0055aa;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .module {
@@ -138,9 +138,9 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Computer Basics Course</h1>
-        <p>Learn essential computer skills step by step — from understanding hardware & software to office applications
-            and internet usage.</p>
+        <h1>Digital Literacy Course</h1>
+        <p>Learn essential digital skills to navigate computers, internet, and online tools confidently. Perfect for
+            beginners aiming to enhance their technology knowledge.</p>
     </div>
 
     <!-- Levels Section -->
@@ -150,27 +150,27 @@
         <div class="level">
             <h2>Level 1: Beginner</h2>
             <div class="module">
-                <h3>Module 1: Introduction to Computers</h3>
+                <h3>Module 1: Understanding Computers</h3>
                 <ul>
-                    <li>Types of computers and their uses</li>
-                    <li>Basic hardware components</li>
-                    <li>Operating system overview (Windows/Linux basics)</li>
+                    <li>Types of devices: Desktop, Laptop, Tablet</li>
+                    <li>Basic hardware components and their functions</li>
+                    <li>Introduction to Operating Systems (Windows, Linux)</li>
                 </ul>
             </div>
             <div class="module">
-                <h3>Module 2: Basic Applications</h3>
+                <h3>Module 2: Basic Software Skills</h3>
                 <ul>
-                    <li>MS Word: Creating and formatting documents</li>
-                    <li>MS Excel: Basic formulas and spreadsheet creation</li>
-                    <li>MS PowerPoint: Simple presentations</li>
+                    <li>Using Word Processors: Create, format, and save documents</li>
+                    <li>Spreadsheets basics: Entering data and simple calculations</li>
+                    <li>Introduction to presentations</li>
                 </ul>
             </div>
             <div class="module">
-                <h3>Module 3: Internet & Email</h3>
+                <h3>Module 3: Internet & Communication</h3>
                 <ul>
-                    <li>Browsing the web safely</li>
+                    <li>Web browsing, searching efficiently</li>
                     <li>Creating and managing email accounts</li>
-                    <li>Basic online communication</li>
+                    <li>Introduction to cloud storage tools (Google Drive, OneDrive)</li>
                 </ul>
             </div>
         </div>
@@ -181,54 +181,25 @@
             <div class="module">
                 <h3>Module 1: File & Data Management</h3>
                 <ul>
-                    <li>Organizing files and folders</li>
-                    <li>Using USB and cloud storage</li>
-                    <li>Basic data entry techniques</li>
+                    <li>Organizing files and folders efficiently</li>
+                    <li>Using external drives and cloud storage for backup</li>
+                    <li>Basic data entry and handling techniques</li>
                 </ul>
             </div>
             <div class="module">
-                <h3>Module 2: Advanced Office Skills</h3>
+                <h3>Module 2: Productivity Tools</h3>
                 <ul>
-                    <li>MS Excel: Charts, tables, and formulas</li>
-                    <li>MS Word: Templates and advanced formatting</li>
-                    <li>MS PowerPoint: Animations and transitions</li>
+                    <li>Advanced Word features: templates, headers, footers</li>
+                    <li>Spreadsheets: formulas, charts, and simple analysis</li>
+                    <li>Presentation tips: slides, multimedia, transitions</li>
                 </ul>
             </div>
             <div class="module">
-                <h3>Module 3: Digital Tools</h3>
+                <h3>Module 3: Digital Collaboration</h3>
                 <ul>
-                    <li>Google Drive, Docs, Sheets, and Slides</li>
-                    <li>Using collaboration tools online</li>
-                    <li>Basic troubleshooting and support</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Level 3: Advanced -->
-        <div class="level">
-            <h2>Level 3: Advanced</h2>
-            <div class="module">
-                <h3>Module 1: Networking & Security</h3>
-                <ul>
-                    <li>Understanding networks and connectivity</li>
-                    <li>Internet safety and cybersecurity basics</li>
-                    <li>Data backup and recovery</li>
-                </ul>
-            </div>
-            <div class="module">
-                <h3>Module 2: Professional Applications</h3>
-                <ul>
-                    <li>Email etiquette and professional communication</li>
-                    <li>Collaborative online projects</li>
-                    <li>Time management tools</li>
-                </ul>
-            </div>
-            <div class="module">
-                <h3>Module 3: Practical Projects</h3>
-                <ul>
-                    <li>Creating professional documents and presentations</li>
-                    <li>Data analysis in Excel</li>
-                    <li>Real-life digital project simulations</li>
+                    <li>Google Docs, Sheets, and Slides for teamwork</li>
+                    <li>Sharing files and setting permissions</li>
+                    <li>Basic online productivity apps and tools</li>
                 </ul>
             </div>
         </div>
@@ -249,7 +220,7 @@
             toggle.classList.toggle('active');
         });
 
-        // Animate modules on scroll
+        // Animate levels on scroll
         const levels = document.querySelectorAll('.level');
 
         const observer = new IntersectionObserver(entries => {
@@ -263,6 +234,7 @@
 
         levels.forEach(level => observer.observe(level));
     </script>
+
 </body>
 
 </html>

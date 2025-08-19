@@ -80,7 +80,7 @@ ul.menu li a:hover{
 }
 
 /* Responsive */
-@media (max-width:768px) {
+@media (max-width:900px) {
   .menu-toggle { display: flex; }
   ul.menu {
     display: none;
@@ -120,6 +120,7 @@ position: ;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   min-height: 350px;
+  
 }
 .heading-sect {
   background: #00aed9;
@@ -152,14 +153,12 @@ position: ;
 }
 
 /* Footer */
-footer {
-  background: #2c3e50;
-  color: #f8f9fa;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 14px;
-}
+ footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+  }
 
 /* Responsive Cards */
 @media (max-width: 992px) {

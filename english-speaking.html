@@ -4,171 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Speaking Course - Sw. Narendra Singh Mahavidyalaya</title>
+    <title>English Speaking Course | Sw. Narendra Singh Mahavidyalaya</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: #f5f7fa;
-        }
-
-        .course-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-            animation: introFade 1.2s ease-out forwards;
-        }
-
-        .course-container h1 {
-            text-align: center;
-            color: #003366;
-            margin-bottom: 20px;
-            animation: slideDown 1s ease-in-out;
-        }
-
-        /* Progress Bar */
-        .progress-container {
-            background: #ddd;
-            border-radius: 20px;
-            height: 20px;
-            margin: 20px 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .progress-bar {
-            background: linear-gradient(90deg, #003366, #0077cc);
-            height: 100%;
-            width: 0%;
-            transition: width 0.5s ease-in-out;
-            border-radius: 20px;
-        }
-
-        .progress-text {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 13px;
-            font-weight: bold;
-            color: #fff;
-            line-height: 20px;
-        }
-
-        .section {
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .section:hover {
-            transform: scale(1.02);
-        }
-
-        .section h2 {
-            color: #fff;
-            background: #003366;
             margin: 0;
-            padding: 12px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-
-        .section h2:hover {
-            background: #0055aa;
-        }
-
-        .content {
-            padding: 0 15px;
-            max-height: 0;
-            overflow: hidden;
-            background: #f9f9f9;
-            transition: max-height 0.6s ease-in-out, padding 0.3s, opacity 0.4s;
-            opacity: 0;
-        }
-
-        .content.open {
-            padding: 15px;
-            max-height: 600px;
-            opacity: 1;
-            animation: fadeSlide 0.6s ease-in-out;
-        }
-
-        .content ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .content ul li {
-            background: #eef3ff;
-            margin: 6px 0;
-            padding: 10px;
-            border-radius: 6px;
-            animation: fadeIn 0.8s ease-in-out;
-        }
-
-        /* Animations */
-        @keyframes introFade {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeSlide {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background: #f8f9fa;
         }
 
         @media (max-width: 768px) {
-            .course-container {
-                padding: 20px;
+            .menu-toggle {
+                display: flex;
             }
+
+            ul.menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                right: 18px;
+                top: 60px;
+                padding: 12px;
+                border-radius: 10px;
+                min-width: 170px;
+                background: #003366;
+            }
+
+            ul.menu.active {
+                display: flex;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #0055aa, #003366);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Levels Section */
+        .levels {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .level {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .level h2 {
+            color: #0055aa;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-container {
+            background: #e0e0e0;
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 10px;
+            width: 0;
+            background: #0055aa;
+            border-radius: 5px;
+            transition: width 2s ease-in-out;
+        }
+
+        .module {
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.6s ease-out;
+        }
+
+        .module.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .module h3 {
+            color: #003366;
+            margin-bottom: 5px;
+        }
+
+        .module ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .module ul li {
+            margin-bottom: 6px;
+        }
+
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
@@ -178,107 +134,172 @@
     <!-- Navbar -->
     <nav>
         <div class="logo-title">
-            <img src="images/logo2.png" alt="College Logo" class="logo">
+            <img src="images/logo2.png" alt="College Logo" style="height:50px; margin-right:10px;">
             <h1>Sw. Narendra Singh Mahavidyalaya</h1>
         </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <ul class="menu" id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
             <li><a href="free-courses.html">Free Courses</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="course-container">
+    <!-- Hero Section -->
+    <div class="hero">
         <h1>English Speaking Course</h1>
-
-        <!-- Progress Bar -->
-        <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
-            <div class="progress-text" id="progress-text">0% Completed</div>
-        </div>
-
-        <div class="section">
-            <h2>About the Course</h2>
-            <div class="content open">
-                <p>
-                    This English Speaking Course is designed to help learners develop strong communication skills,
-                    improve fluency, and gain confidence in both professional and everyday conversations.
-                    The course covers grammar, vocabulary, pronunciation, and practical usage of the language.
-                </p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Course Highlights</h2>
-            <div class="content">
-                <ul>
-                    <li>Improve fluency and pronunciation</li>
-                    <li>Learn professional vocabulary</li>
-                    <li>Interactive speaking practice sessions</li>
-                    <li>Group discussions and role plays</li>
-                    <li>Business communication skills</li>
-                    <li>Confidence building activities</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Who Should Join?</h2>
-            <div class="content">
-                <p>
-                    This course is ideal for students, professionals, job seekers, and anyone who wants to enhance
-                    their English communication skills for personal or professional growth.
-                </p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Duration & Mode</h2>
-            <div class="content">
-                <ul>
-                    <li>Duration: 3 Months</li>
-                    <li>Mode: Online / Offline</li>
-                    <li>Flexible timings available</li>
-                </ul>
-            </div>
-        </div>
+        <p>Master English fluency step by step with level-wise learning, from basic conversation to professional
+            communication.</p>
     </div>
 
+    <!-- Levels Section -->
+    <div class="levels">
+
+        <!-- Level 1: Beginner -->
+        <div class="level">
+            <h2>Level 1: Beginner</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" data-width="33%"></div>
+            </div>
+
+            <div class="module">
+                <h3>Module 1: Fundamentals of English</h3>
+                <ul>
+                    <li>English alphabet, pronunciation, and phonetics</li>
+                    <li>Basic greetings and self-introduction</li>
+                    <li>Numbers, dates, and common expressions</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h3>Module 2: Basic Grammar</h3>
+                <ul>
+                    <li>Simple present, past, and future tense</li>
+                    <li>Basic sentence formation</li>
+                    <li>Common verbs, nouns, and adjectives usage</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h3>Module 3: Everyday Conversations</h3>
+                <ul>
+                    <li>Introducing yourself and others</li>
+                    <li>Shopping, traveling, and basic social conversations</li>
+                    <li>Common questions and answers in daily life</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Level 2: Intermediate -->
+        <div class="level">
+            <h2>Level 2: Intermediate</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" data-width="66%"></div>
+            </div>
+
+            <div class="module">
+                <h3>Module 1: Conversational English</h3>
+                <ul>
+                    <li>Role plays for social and professional scenarios</li>
+                    <li>Polite requests, opinions, and suggestions</li>
+                    <li>Expressing ideas clearly and confidently</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h3>Module 2: Advanced Grammar & Vocabulary</h3>
+                <ul>
+                    <li>Complex sentences and clauses</li>
+                    <li>Common idioms, phrases, and collocations</li>
+                    <li>Synonyms, antonyms, and word usage practice</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h3>Module 3: Listening & Pronunciation Skills</h3>
+                <ul>
+                    <li>Understanding native speakers</li>
+                    <li>Correcting common pronunciation mistakes</li>
+                    <li>Shadowing and repetition exercises</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Level 3: Advanced -->
+        <div class="level">
+            <h2>Level 3: Advanced</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" data-width="100%"></div>
+            </div>
+
+            <div class="module">
+                <h3>Module 1: Public Speaking & Presentation</h3>
+                <ul>
+                    <li>Structured speech and presentation skills</li>
+                    <li>Handling audience questions and feedback</li>
+                    <li>Storytelling and persuasive communication</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h3>Module 2: Professional English</h3>
+                <ul>
+                    <li>Business emails and formal communication</li>
+                    <li>Telephonic and video call etiquette</li>
+                    <li>Resume writing and interview practice</li>
+                </ul>
+            </div>
+            <div class="module">
+                <h3>Module 3: Fluency & Confidence Enhancement</h3>
+                <ul>
+                    <li>Debate and group discussion exercises</li>
+                    <li>Advanced idioms, expressions, and phrasal verbs</li>
+                    <li>Daily speaking challenges to build confidence</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Sw. Narendra Singh Mahavidyalaya. All Rights Reserved.</p>
+    </footer>
+
     <script>
-        const sections = document.querySelectorAll(".section h2");
-        const contents = document.querySelectorAll(".content");
-        const progressBar = document.getElementById("progress-bar");
-        const progressText = document.getElementById("progress-text");
-
-        function updateProgress() {
-            const opened = document.querySelectorAll(".content.open").length;
-            const total = contents.length;
-            const progress = Math.round((opened / total) * 100);
-            progressBar.style.width = progress + "%";
-            progressText.textContent = progress + "% Completed";
-        }
-
-        // By default first section open → update progress
-        updateProgress();
-
-        sections.forEach(section => {
-            section.addEventListener("click", () => {
-                const content = section.nextElementSibling;
-
-                // Close others
-                contents.forEach(c => {
-                    if (c !== content) c.classList.remove("open");
-                });
-
-                // Toggle current
-                content.classList.toggle("open");
-
-                updateProgress();
-            });
+        // Hamburger toggle
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
         });
+
+        // Animate progress bars
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            setTimeout(() => {
+                bar.style.width = bar.getAttribute('data-width');
+            }, 500);
+        });
+
+        // Scroll animation for modules
+        const modules = document.querySelectorAll('.module');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        modules.forEach(module => observer.observe(module));
     </script>
 
 </body>

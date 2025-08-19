@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance | Sw. Narendra Singh Mahavidyalaya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            ul.menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                right: 18px;
+                top: 60px;
+                padding: 12px;
+                border-radius: 10px;
+                min-width: 170px;
+                background: #003366;
+            }
+
+            ul.menu.active {
+                display: flex;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #0055aa, #003366);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            margin-top: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Modules Section */
+        .modules {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .module {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.6s ease-out;
+        }
+
+        .module.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .module h2 {
+            color: #0055aa;
+            margin-bottom: 15px;
+        }
+
+        .module ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .module ul li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo-title">
+            <img src="images/logo2.png" alt="College Logo" style="height:50px; margin-right:10px;">
+            <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
+            <li><a href="free-courses.html">Free Courses</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Career Guidance</h1>
+        <p>Learn essential skills and knowledge to make informed career decisions, improve employability, and succeed
+            professionally.</p>
+    </div>
+
+    <!-- Modules Section -->
+    <div class="modules">
+
+        <div class="module">
+            <h2>Self-Assessment</h2>
+            <ul>
+                <li>Identify your strengths, weaknesses, interests, and values</li>
+                <li>Understand personality types and career compatibility</li>
+                <li>Build self-confidence and motivation for career planning</li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <h2>Career Exploration</h2>
+            <ul>
+                <li>Learn about various industries, job roles, and growth opportunities</li>
+                <li>Research career paths and future trends</li>
+                <li>Match personal interests and skills to career options</li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <h2>Skill Development</h2>
+            <ul>
+                <li>Identify essential skills for your desired career</li>
+                <li>Focus on soft skills: communication, teamwork, problem-solving</li>
+                <li>Plan skill-building through courses, workshops, and practice</li>
+            </ul>
+        </div>
+
+        <div class="module">
+            <h2>Job Readiness</h2>
+            <ul>
+                <li>Create professional resumes and cover letters</li>
+                <li>Prepare for interviews and networking</li>
+                <li>Maintain a strong professional presence online</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Sw. Narendra Singh Mahavidyalaya. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Hamburger toggle
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        });
+
+        // Animate modules on scroll
+        const modules = document.querySelectorAll('.module');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        modules.forEach(module => observer.observe(module));
+    </script>
+
+</body>
+
+</html>

@@ -1,16 +1,20 @@
 function doPost(e) {
-  var data = e.parameter; 
+  var data = e.parameter;
 
-  // Gmail पर mail भेजना
-  var email = "abhaygupta9696@gmail.com"; 
-  var subject = "New Contact Form Submission";
-  var message = "Name: " + data.name + "\nEmail: " + data.email + "\nSubject: " + data.subject + "\nMessage: " + data.message;
-  MailApp.sendEmail(email, subject, message);
+  // Email Subject
+  var subject = "📩 New Contact Form Submission";
 
-  // Google Sheet में data save करना
-  var sheet = SpreadsheetApp.openById("1sFD2glOjulTDDksiqQq5rUQLzBqyGFv7FBRTcUFYFV0").getSheetByName("ContactUs");
-  sheet.appendRow([new Date(), data.name, data.email, data.subject, data.message]);
+  // Email Body
+  var message =
+    "Name: " + data.name + "\n" +
+    "Email: " + data.email + "\n" +
+    "Phone: " + data.phone + "\n" +
+    "Location: " + data.location + "\n" +
+    "Subject: " + data.subject + "\n" +
+    "Message: " + data.message;
 
-  // response वापस भेजना
+  // Send email to your Gmail
+  MailApp.sendEmail("abhaygupta9696@gmail.com", subject, message);
+
   return ContentService.createTextOutput("Success");
 }

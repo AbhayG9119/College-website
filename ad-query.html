@@ -86,7 +86,6 @@
     }
 
     .page-title {
-
       margin-top: 40px;
       font-size: 50px;
       font-weight: bold;
@@ -132,10 +131,9 @@
   <!-- Admission Inquiry Form Section -->
   <section class="admission-form">
     <div class="container">
-      <h2 class="page-title">Admission Enquiry Form</h2>
+      <h2 class="page-title">Admission Enquiry </h2>
       <p class="para">Fill in your details and our team will connect with you shortly.</p>
-
-      <form id="inquiryForm">
+      <form id="enquiryForm">
         <div class="form-group">
           <label for="name">Full Name *</label>
           <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -149,6 +147,18 @@
         <div class="form-group">
           <label for="phone">Mobile Number *</label>
           <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required>
+        </div>
+
+        <!-- 🔹 New Location Field -->
+        <div class="form-group">
+          <label for="location">Location / City *</label>
+          <input type="text" id="location" name="location" placeholder="Enter your city / address" required>
+        </div>
+
+        <!-- 🔹 New Pincode Field -->
+        <div class="form-group">
+          <label for="pincode">Pincode *</label>
+          <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode" required>
         </div>
 
         <div class="form-group">
@@ -166,8 +176,9 @@
           <textarea id="message" name="message" rows="4" placeholder="Write your query here..."></textarea>
         </div>
 
-        <button type="submit" class="btn-submit">Submit Inquiry</button>
+        <button type="submit" class="btn-submit">Submit</button>
       </form>
+
     </div>
   </section>
 
@@ -208,7 +219,6 @@
       <div class="footer-col">
         <h3>Follow Us</h3>
         <div class="social-links">
-
           <a href="#">🌐 FB</a>
           <a href="#">📸 IG</a>
           <a href="#">💼 LinkedIn</a>
@@ -225,29 +235,28 @@
 
   <!-- 🔹 Step 4: Connect with Google Sheets -->
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxAOdAWPlmtmz0DP4UVpvw18446UpoYCuKZDGCGdGDe8SESXqe5xEL4NWkKXzkdBKRBcg/exec"; // 👈 yahan apna Apps Script ka Web App URL daalo
-    const form = document.getElementById("inquiryForm");
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwlQ6dF7DK5LY70_3Y3nlKS32G-59HyBwLhiDxT8UyF3_ZuUAmg4ejTe--EQFViWHFucg/exec";
+    const form = document.getElementById("enquiryForm");
 
     form.addEventListener("submit", e => {
       e.preventDefault();
 
-      let data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value,
-        course: form.course.value,
-        message: form.message.value
-      };
-
       fetch(scriptURL, {
         method: "POST",
-        body: JSON.stringify(data)
+        body: new FormData(form)   // ✅ ab location + pincode bhi jayega
       })
-        .then(res => {
-          alert("✅ Form submitted successfully!");
-          form.reset();
+        .then(response => {
+          if (response.ok) {
+            alert("✅ Form Submitted Successfully!");
+            form.reset();
+          } else {
+            alert("⚠️ Submission Failed! Please try again.");
+          }
         })
-        .catch(err => alert("❌ Error: " + err.message));
+        .catch(error => {
+          console.error("Error:", error);
+          alert("❌ Error submitting form! Please check your internet connection.");
+        });
     });
   </script>
 

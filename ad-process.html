@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Process</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  body {
+    margin: 0;
+    background: #f9f9f9;
+  }
+
+  .admission-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+  }
+
+  h2{
+    margin-top: 50px;
+  }
+
+  .admission-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #1e3c72;
+  }
+
+  .admission-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Cards Layout */
+  .process-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .process-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.2);
+  }
+
+  .process-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .process-content {
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process-content h3 {
+    font-size: 20px;
+    color: #0d47a1;
+    margin-bottom: 12px;
+  }
+
+  .process-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    flex-grow: 1;
+  }
+
+  /* ✅ Responsive Fix */
+  @media (max-width: 768px) {
+    .admission-section {
+      padding: 40px 15px;
+    }
+
+    .admission-section h2 {
+      font-size: 26px;
+    }
+
+    .admission-section p {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    /* 👇 Force vertical stack */
+    .process-container {
+      grid-template-columns: 1fr;
+    }
+
+    .process-card img {
+      height: 160px;
+    }
+
+    .process-content h3 {
+      font-size: 18px;
+    }
+
+    .process-content p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+
+    
+
+    .admission-section {
+      padding: 30px 10px;
+    }
+
+    .admission-section h2 {
+      font-size: 22px;
+    }
+
+    .process-container {
+      gap: 15px;
+      grid-template-columns: 1fr; /* ✅ small screens bhi vertical */
+    }
+
+    .process-card img {
+      height: 140px;
+    }
+
+    .process-content h3 {
+      font-size: 16px;
+    }
+
+    .process-content p {
+      font-size: 13px;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo-title">
+      <img src="images/logo2.png" alt="College Logo" class="logo">
+      <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" data-link>Home</a></li>
+      <li><a href="about.html"  data-link>About</a></li>
+      <li><a href="courses.html" data-link>Courses</a></li>
+      <li><a href="free-courses.html" data-link>Free Courses</a></li>
+      <li><a href="gallery.html" data-link>Gallery</a></li>
+      <li><a href="contact.html" data-link>Contact</a></li>
+      <li><a href="ad-query.html" data-link>Admission Query</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <section class="admission-section">
+    <h2>Admission Process</h2>
+    <p>Follow these simple steps to secure admission in our institution. Each step ensures a smooth and transparent
+      process for all applicants.</p>
+
+    <div class="process-container">
+
+      <!-- Step 1 -->
+      <div class="process-card">
+        <img src="images/ca.webp" alt="Application">
+        <div class="process-content">
+          <h3>Application</h3>
+          <p>Eligible candidates can apply online or offline for B.A, B.Sc and B.Ed programs by filling out
+            the form, submitting documents, and paying the fee.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-card">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Shortlisting">
+        <div class="process-content">
+          <h3>Shortlisting</h3>
+          <p>Applicants are shortlisted based on academic performance, entrance exam scores, aptitude tests, and
+            personal interviews.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-card">
+        <img src="images/coun.jpg" alt="Counseling">
+        <div class="process-content">
+          <h3>Counseling</h3>
+          <p>Seat allotment for B.A, B.Sc and B.Ed programs is done through counseling for candidates with valid
+            entrance scores.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-card">
+        <img src="images/Document-verification.webp" alt="Document Verification">
+        <div class="process-content">
+          <h3>Document Verification</h3>
+          <p>Students must attend the registration process for physical document verification. Failure may result in
+            cancellation of admission.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>Sw. Narendra Singh Mahavidyalaya is committed to providing
+          quality education and empowering students for a brighter future.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html" data-link>Home</a></li>
+          <li><a href="about.html" data-link>About</a></li>
+          <li><a href="courses.html" data-link>Courses</a></li>
+          <li><a href="free-courses.html" data-link>Free Courses</a></li>
+          <li><a href="gallery.html" data-link>Gallery</a></li>
+          <li><a href="contact.html" data-link>Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Sw. Narendra Singh Mahavidyalaya, Gajner, Kanpur Dehat </p>
+        <p class="para">Adjacent to the Gajner Police Station.</p>
+        <p>📞+91 8851955753 , +91 8851955596</p>
+        <p>📧 snsmv25@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">🌐 FB</a>
+          <a href="#">📸 IG</a>
+          <a href="#">💼 LinkedIn</a>
+          <a href="#">▶️ YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sw. Narendra Singh Mahavidyalaya | All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

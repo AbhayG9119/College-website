@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility Criteria | Sw. Narendra Singh Mahavidyalaya</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Heading */
+    .page-header {
+      background: linear-gradient(135deg, #0056b3, #2196f3);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 70px;
+      width: 100%;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    /* Course Card */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #0056b3;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #2196f3;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo-title">
+      <img src="images/logo2.png" alt="College Logo" class="logo">
+      <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="index.html" data-link>Home</a></li>
+      <li><a href="about.html" data-link>About</a></li>
+      <li><a href="courses.html" data-link>Courses</a></li>
+      <li><a href="free-courses.html" data-link>Free Courses</a></li>
+      <li><a href="gallery.html" data-link>Gallery</a></li>
+      <li><a href="contact.html" data-link>Contact</a></li>
+      <li><a href="ad-query.html" data-link>Admission Query</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Eligibility Criteria</h1>
+    <p>Find the detailed eligibility requirements for B.A., B.Sc., and B.Ed. programs</p>
+  </header>
+
+  <!-- Course Eligibility Section -->
+  <section class="container">
+
+    <!-- BA -->
+    <div class="card">
+      <h2>Bachelor of Arts (B.A.)</h2>
+      <ul>
+        <li>Candidate must have passed 10+2 (Intermediate) or equivalent from a recognized board.</li>
+        <li>Minimum 45% marks in aggregate (40% for reserved category as per norms).</li>
+        <li>Students from any stream (Arts/Science/Commerce) are eligible.</li>
+        <li>Admission will be based on merit and availability of seats.</li>
+      </ul>
+    </div>
+
+    <!-- B.Sc -->
+    <div class="card">
+      <h2>Bachelor of Science (B.Sc.)</h2>
+      <ul>
+        <li>Candidate must have passed 10+2 (Intermediate) with Science (PCM/PCB) from a recognized board.</li>
+        <li>Minimum 45% marks in aggregate (40% for reserved category as per norms).</li>
+        <li>Preference will be given to students with strong academic background in Science.</li>
+        <li>Admission will be based on merit and availability of seats.</li>
+      </ul>
+    </div>
+
+    <!-- B.Ed -->
+    <div class="card">
+      <h2>Bachelor of Education (B.Ed.)</h2>
+      <ul>
+        <li>Candidate must have completed a Bachelor's or Master's degree in any discipline from a recognized
+          university.</li>
+        <li>Minimum 50% marks in graduation/post-graduation (45% for reserved category as per norms).</li>
+        <li>Admission process will follow NCTE and University guidelines.</li>
+        <li>Selection may include entrance test or merit-based admission.</li>
+      </ul>
+    </div>
+
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>Sw. Narendra Singh Mahavidyalaya is committed to providing
+          quality education and empowering students for a brighter future.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html" data-link>Home</a></li>
+          <li><a href="about.html" data-link>About</a></li>
+          <li><a href="courses.html" data-link>Courses</a></li>
+          <li><a href="free-courses.html" data-link>Free Courses</a></li>
+          <li><a href="gallery.html" data-link>Gallery</a></li>
+          <li><a href="contact.html" data-link>Contact</a></li>
+          <li><a href="ad-query.html" data-link>Admission Query</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Sw. Narendra Singh Mahavidyalaya, Gajner, Kanpur Dehat </p>
+        <p class="para">Adjacent to the Gajner Police Station.</p>
+        <p>📞+91 8851955753 , +91 8851955596</p>
+        <p>📧 snsmv25@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+
+          <a href="#">🌐 FB</a>
+          <a href="#">📸 IG</a>
+          <a href="#">💼 LinkedIn</a>
+          <a href="#">▶️ YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sw. Narendra Singh Mahavidyalaya | All Rights Reserved</p>
+    </div>
+  </footer>
+  <script>
+    // Hamburger toggle
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>

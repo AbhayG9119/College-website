@@ -164,24 +164,37 @@
 </head>
 
 <body>
+
+
   <!-- NAVBAR -->
+ <!-- Navbar -->
   <nav>
     <div class="logo-title">
-      <img src="images/logo2.png" alt="College Logo" class="logo">
+      <img src="images/logo2.png" alt="College Logo" style="height:50px; margin-right:10px;">
       <h1>Sw. Narendra Singh Mahavidyalaya</h1>
     </div>
-    <ul class="menu" id="menu">
-      <li><a href="index.html" data-link>Home</a></li>
-      <li><a href="about.html"  data-link>About</a></li>
-      <li><a href="courses.html" data-link>Courses</a></li>
-      <li><a href="free-courses.html" data-link>Free Courses</a></li>
-      <li><a href="gallery.html" data-link>Gallery</a></li>
-      <li><a href="contact.html" data-link>Contact</a></li>
-      <li><a href="ad-query.html" data-link>Admission Query</a></li>
-    </ul>
-    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu" title="Menu">
-      <span></span><span></span><span></span>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#" class="active" >Admission <i class="fa-solid fa-caret-down"></i></a>
+      <ul>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="eligibility.html">Eligibility</a></li>
+        <li><a href="ad-process.html">Admission Process</a></li>
+        <li><a href="ad-query.html">Admission Query</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+      </ul></li>
+      <li><a href="free-courses.html">Free Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 
   <main class="courses-container1">

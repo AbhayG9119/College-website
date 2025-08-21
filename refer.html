@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Refer a Friend – College Certified Courses</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      margin-top: 70px;
       background: #f9fbfe;
       color: #222;
     }
@@ -55,7 +62,7 @@
       background: #fff;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       flex: 1 1 280px;
       text-align: center;
     }
@@ -69,7 +76,7 @@
       background: #fff;
       border-radius: 10px;
       padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       max-width: 600px;
       margin: 40px auto;
     }
@@ -80,7 +87,8 @@
       gap: 15px;
     }
 
-    input, textarea {
+    input,
+    textarea {
       padding: 12px;
       border-radius: 8px;
       border: 1px solid #ccc;
@@ -97,6 +105,33 @@
       cursor: pointer;
     }
 
+    /* Input + Textarea Hover & Focus */
+    form input:hover,
+    form textarea:hover {
+      border-color: #0076A3;
+      background-color: #f0faff;
+      transition: all 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #004b7c;
+      box-shadow: 0 0 5px rgba(0, 118, 163, 0.4);
+      background-color: #f4fbff;
+    }
+
+    /* Submit Button Hover */
+    form button {
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    form button:hover {
+      background: #00365b;
+      transform: scale(1.02);
+    }
+
+
     button:hover {
       background: #00365b;
     }
@@ -109,17 +144,92 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .card { flex: 1 1 100%; }
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
     }
+
+    /* Hero Section Hover */
+
+
+/* Card Hover */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Input & Textarea Hover Already Done – Add Smooth Transition */
+form input,
+form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Button Hover */
+form button {
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #002c45;
+  transform: scale(1.05);
+}
+
   </style>
 </head>
+
 <body>
+  
+<!-- Navbar -->
+  <nav>
+    <div class="logo-title">
+      <img src="images/logo2.png" alt="College Logo" style="height:50px; margin-right:10px;">
+      <h1>Sw. Narendra Singh Mahavidyalaya</h1>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#" class="active" >Admission <i class="fa-solid fa-caret-down"></i></a>
+      <ul>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="eligibility.html">Eligibility</a></li>
+        <li><a href="ad-process.html">Admission Process</a></li>
+        <li><a href="ad-query.html">Admission Query</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+      </ul></li>
+      <li><a href="free-courses.html">Free Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Banner -->
   <div class="hero">
     <h1>Refer a Friend to Our Programs</h1>
-    <p>Help your friends join career-building workshops & online certification courses and get recognized for your support!</p>
+    <p>Help your friends join career-building workshops & online certification courses and get recognized for your
+      support!</p>
   </div>
 
   <!-- Benefits Section -->
@@ -142,19 +252,108 @@
   </section>
 
   <!-- Referral Form -->
+  <!-- Referral Form -->
   <section class="form-section">
     <h2 class="section-title">Submit Referral</h2>
-    <form>
-      <input type="text" placeholder="Your Full Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Your Roll No. / Student ID" required>
-      <input type="text" placeholder="Friend's Name" required>
-      <input type="email" placeholder="Friend's Email" required>
-      <textarea rows="4" placeholder="Any message or note (optional)"></textarea>
+    <form id="referralForm">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <input type="text" name="roll" placeholder="Your Roll No. / Student ID" required>
+
+      <input type="text" name="friendName" placeholder="Friend's Name" required>
+      <input type="email" name="friendEmail" placeholder="Friend's Email" required>
+      <input type="text" name="friendPhone" placeholder="Friend's Phone Number" required>
+      <input type="text" name="friendLocation" placeholder="Friend's Location / City" required>
+      <input type="text" name="friendPincode" placeholder="Friend's Pincode" required>
+
+      <textarea name="message" rows="4" placeholder="Any message or note (optional)"></textarea>
       <button type="submit">Submit Referral</button>
     </form>
-    <p class="note">Note: This referral is only applicable to short-term courses and not valid for regular degree admissions.</p>
+
+    <p class="note">Note: This referral is only applicable to short-term courses and not valid for regular degree
+      admissions.</p>
+    <p id="successMsg" style="color: green; text-align: center; margin-top: 10px;"></p>
   </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Section -->
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>Sw. Narendra Singh Mahavidyalaya is committed to providing
+          quality education and empowering students for a brighter future.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html" data-link>Home</a></li>
+          <li><a href="about.html" data-link>About</a></li>
+          <li><a href="courses.html" data-link>Courses</a></li>
+          <li><a href="free-courses.html" data-link>Free Courses</a></li>
+          <li><a href="gallery.html" data-link>Gallery</a></li>
+          <li><a href="contact.html" data-link>Contact</a></li>
+          <li><a href="ad-query.html" data-link>Admission Query</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>📍 Sw. Narendra Singh Mahavidyalaya, Gajner, Kanpur Dehat </p>
+        <p class="para">Adjacent to the Gajner Police Station.</p>
+        <p>📞+91 8851955753 , +91 8851955596</p>
+        <p>📧 snsmv25@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+
+          <a href="#">🌐 FB</a>
+          <a href="#">📸 IG</a>
+          <a href="#">💼 LinkedIn</a>
+          <a href="#">▶️ YouTube</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sw. Narendra Singh Mahavidyalaya | All Rights Reserved</p>
+    </div>
+  </footer>
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwrKsZwv4MKRiFewyEZYRQSIMbCcYrR5NwHUdIyNjdYhx7lFKwC2gOJkfn2keq6VrSr/exec";
+    const form = document.getElementById("referralForm");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form)   // ✅ ab location + pincode bhi jayega
+      })
+        .then(response => {
+          if (response.ok) {
+            alert("✅ Form Submitted Successfully!");
+            form.reset();
+          } else {
+            alert("⚠️ Submission Failed! Please try again.");
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("❌ Error submitting form! Please check your internet connection.");
+        });
+    });
+  </script>
+
 
 </body>
+
 </html>

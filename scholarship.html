@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scholarship & Financial Aid | Sw. Narendra Singh Mahavidyalaya</title>
   <link rel="stylesheet" href="css/style.css">
+   <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
+
 
   <style>
 
@@ -106,15 +108,15 @@
 
     /* Scholarship Page Styles */
     body {
-      font-family: Arial, sans-serif;
+      width: 100%;
       background: #f4f7fb;
       margin: 0;
       padding: 0;
     }
 
     .scholarship-header {
-      background: linear-gradient(135deg, #2196f3, #21cbf3);
-      color: #fff;
+      
+      color: #1f3e8c;
       text-align: center;
       padding: 50px 20px;
       width: 100%;
@@ -196,6 +198,51 @@
         font-size: 1rem;
       }
     }
+
+
+/* Submenu by default hidden */
+.submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.submenu li {
+  padding: 8px 15px;
+}
+
+.submenu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.submenu li a:hover {
+  background: #f5f5f5;
+}
+
+/* Dropdown active */
+.submenu.active {
+  display: block;
+}
+
+/* Mobile responsive */
+@media (max-width: 992px) {
+  .submenu {
+    position: static;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+}
+
+    
   </style>
 </head>
 <body>
@@ -216,7 +263,14 @@
     <ul class="menu" id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="courses.html" class="active">Courses</a></li>
+      <li><a href="#" class="active" >Admission <i class="fa-solid fa-caret-down"></i></a>
+      <ul>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="eligibility.html">Eligibility</a></li>
+        <li><a href="ad-process.html">Admission Process</a></li>
+        <li><a href="ad-query.html">Admission Query</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+      </ul></li>
       <li><a href="free-courses.html">Free Courses</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -226,7 +280,7 @@
   <!-- Header -->
   <section class="scholarship-header">
     <h1>Scholarship & Financial Aid</h1>
-    <p>Supporting students in achieving academic excellence with financial assistance</p>
+    <p class="para">Supporting students in achieving academic excellence with financial assistance</p>
   </section>
 
   <!-- Scholarship Cards -->
@@ -341,5 +395,38 @@
       menu.classList.toggle('active');
       toggle.classList.toggle('active');
     });
-  </script>
+
+
+  
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(dropdown => {
+    const submenu = dropdown.querySelector(".submenu");
+    const toggleLink = dropdown.querySelector("a"); // Admission ya arrow
+
+    if (!submenu) return;
+
+    // Sirf click par kaam kare
+    toggleLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Baaki sare dropdown close ho jaye
+      document.querySelectorAll(".submenu.active").forEach(openMenu => {
+        if (openMenu !== submenu) openMenu.classList.remove("active");
+      });
+
+      // Is submenu ko toggle kare
+      submenu.classList.toggle("active");
+    });
+  });
+});
+
+
+
+
+    
+</script>
+
+
 </html>

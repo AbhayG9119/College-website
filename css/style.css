@@ -158,10 +158,6 @@ ul.menu li:hover > ul {
 
 }
 
-marquee{
-  margin-top: 0px;
-  font-size: 1.3em;
-  top: 100px; 
 
   .hero-img{
     padding-top: 100px;
@@ -515,6 +511,7 @@ form{
     text-align: center;
   }
 }
+
 
 
 

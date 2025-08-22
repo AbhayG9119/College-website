@@ -123,11 +123,6 @@ ul.menu li:hover > ul {
 /* Responsive Navbar */
 @media (max-width: 900px) {
   .menu-toggle { display: flex; }
-
-   marquee{
-  margin-top: 0px;
-  font-size: 1.3em;
-  top: 100px; 
   
   ul.menu {
     display: none;
@@ -514,5 +509,6 @@ form{
     text-align: center;
   }
 }
+
 
 

@@ -123,7 +123,7 @@ ul.menu li:hover > ul {
 /* Responsive Navbar */
 @media (max-width: 900px) {
   .menu-toggle { display: flex; }
-
+  
   ul.menu {
     display: none;
     position: absolute;
@@ -157,6 +157,8 @@ ul.menu li:hover > ul {
   }
 
 }
+
+
   .hero-img{
     padding-top: 100px;
   }
@@ -472,7 +474,7 @@ form{
 }
 
 .footer-col ul li {
-  margin: 8px 0;
+  /* margin: 8px 0; */
 }
 
 .footer-col ul li a:hover {
@@ -502,6 +504,24 @@ form{
   color: #aaa;
 }
 
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* 2 columns */
+  gap: 0px 20px; /* row-gap 8px, column-gap 30px */
+  list-style: none;
+  margin: 0;
+}
+
+.quick-links li a {
+  text-decoration: none;
+  color: #fff; /* apne footer ke hisaab se */
+  transition: 0.3s;
+}
+
+.quick-links li a:hover {
+  color: #ff9800; /* hover color */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
@@ -509,4 +529,9 @@ form{
     text-align: center;
   }
 }
+
+
+
+
+
 

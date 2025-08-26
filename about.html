@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Sw. Narendra Singh Mahavidyalaya</title>
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/aa7454d09f.js" crossorigin="anonymous"></script>
 
 </head>
 <style>
@@ -39,7 +41,7 @@
 
   nav .menu a.active {
     background: #003366;
-      color: #f0d466;
+    color: #f0d466;
     font-weight: 500;
   }
 
@@ -138,46 +140,30 @@
     transition: background 0.9s ease-in-out;
     transform: scale(1.05);
   }
-
-  /* Footer */
-  footer {
-    background: #003366;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-  }
-
-  /* Responsive */
-  @media(max-width: 900px) {
-
-    .about-section,
-    .mission-vision,
-    .values ul {
-      grid-template-columns: 1fr;
-    }
-  }
 </style>
+
 <body>
-  
+
   <!-- NAVBAR -->
   <!-- Navbar -->
- <nav>
+  <nav>
     <div class="logo-title">
       <img src="images/logo2.png" alt="College Logo" class="logo">
       <h1>Sw. Narendra Singh Mahavidyalaya</h1>
     </div>
     <ul class="menu" id="menu">
       <li><a href="index.html" data-link>Home</a></li>
-      <li><a href="about.html"  data-link>About</a></li>
-       <li><a href="#" class="active" >Admission <i class="fa-solid fa-caret-down"></i></a>
-      <ul>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="eligibility.html">Eligibility</a></li>
-        <li><a href="ad-process.html">Admission Process</a></li>
-        <li><a href="ad-query.html">Admission Query</a></li>
-        <li><a href="scholarship.html">Scholarship</a></li>
-        <li><a href="ncc.html">NCC</a></li>
-      </ul></li>
+      <li><a href="about.html" data-link>About</a></li>
+      <li><a href="#" class="active">Admission <i class="fa-solid fa-caret-down"></i></a>
+        <ul>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="eligibility.html">Eligibility</a></li>
+          <li><a href="ad-process.html">Admission Process</a></li>
+          <li><a href="ad-query.html">Admission Query</a></li>
+          <li><a href="scholarship.html">Scholarship</a></li>
+          <li><a href="ncc.html">NCC</a></li>
+        </ul>
+      </li>
       <li><a href="free-courses.html" data-link>Free Courses</a></li>
       <li><a href="gallery.html" data-link>Gallery</a></li>
       <li><a href="contact.html" data-link>Contact</a></li>
@@ -197,11 +183,14 @@
       <div class="about-text">
         <h2>Welcome to Our College</h2>
         <p>
-          Swargiya Narendra Singh Mahavidyalaya is a premier institution dedicated to academic excellence, cultural enrichment, and holistic student development. 
-          Established with the vision of empowering rural and urban youth, the college provides quality education across diverse disciplines.
+          Swargiya Narendra Singh Mahavidyalaya is a premier institution dedicated to academic excellence, cultural
+          enrichment, and holistic student development.
+          Established with the vision of empowering rural and urban youth, the college provides quality education across
+          diverse disciplines.
         </p>
         <p>
-          With state-of-the-art infrastructure, experienced faculty, and a student-friendly environment, we aim to create leaders, innovators, and responsible citizens of tomorrow.
+          With state-of-the-art infrastructure, experienced faculty, and a student-friendly environment, we aim to
+          create leaders, innovators, and responsible citizens of tomorrow.
         </p>
       </div>
       <img src="images/slider1.png" alt="College Building">
@@ -212,13 +201,15 @@
       <div class="card">
         <h3>Our Mission</h3>
         <p>
-          To impart quality education that blends academic learning with real-world applications, fostering intellectual growth, moral values, and a spirit of social responsibility among students.
+          To impart quality education that blends academic learning with real-world applications, fostering intellectual
+          growth, moral values, and a spirit of social responsibility among students.
         </p>
       </div>
       <div class="card">
         <h3>Our Vision</h3>
         <p>
-          To be recognized as a center of excellence in higher education, nurturing talent and promoting innovation while contributing to the nation’s progress and development.
+          To be recognized as a center of excellence in higher education, nurturing talent and promoting innovation
+          while contributing to the nation’s progress and development.
         </p>
       </div>
     </div>
@@ -238,38 +229,35 @@
   </div>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const historyText = `
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const historyText = `
     Established in 1990, Sw. Narendra Singh Mahavidyalaya has been a centre of academic excellence in Kanpur Dehat.
     With a vision to nurture young minds, our institution emphasizes holistic education, quality teaching, and
     community engagement.
   `;
-  document.getElementById("college-history").textContent = historyText;
+      document.getElementById("college-history").textContent = historyText;
 
-  document.getElementById("mission-text").textContent =
-    "To empower students through inclusive education, practical learning experiences, and moral values.";
+      document.getElementById("mission-text").textContent =
+        "To empower students through inclusive education, practical learning experiences, and moral values.";
 
-  document.getElementById("vision-text").textContent =
-    "To become a leading regional institution recognized for academic innovation, student development, and social impact.";
+      document.getElementById("vision-text").textContent =
+        "To become a leading regional institution recognized for academic innovation, student development, and social impact.";
 
-  document.getElementById("principal-text").textContent =
-    "I warmly welcome you to Sw. Narendra Singh Mahavidyalaya. Our college fosters a culture of respect, scholarship and growth. Together, we strive to create responsible citizens of tomorrow.";
-});
+      document.getElementById("principal-text").textContent =
+        "I warmly welcome you to Sw. Narendra Singh Mahavidyalaya. Our college fosters a culture of respect, scholarship and growth. Together, we strive to create responsible citizens of tomorrow.";
+    });
 
-</script>
+  </script>
 
   <!-- Footer -->
   <footer class="footer">
-  <div class="footer-container">
-    <!-- About Section -->
-    <div class="footer-col">
-      <h3>About Us</h3>
-      <p>Sw. Narendra Singh Mahavidyalaya is committed to providing 
-         quality education and empowering students for a brighter future.</p>
-    </div>
-
- <!-- Quick Links -->
+    <div class="footer-container">
+      <div class="footer-col footer-branding">
+        <img src="images/logo2.png" alt="College Logo" class="footer-logo">
+        <h3>Sw. Narendra Singh Mahavidyalaya</h3>
+        <p class="tagline">Unlocking potential through education.</p>
+      </div>
       <div class="footer-col">
         <h3>Quick Links</h3>
         <ul class="quick-links">
@@ -281,36 +269,36 @@
           <li><a href="contact.html" data-link>Contact</a></li>
         </ul>
       </div>
-
-    <!-- Contact Info -->
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <p>📍 Sw. Narendra Singh Mahavidyalaya, Gajner, Kanpur Dehat </p> <p class="para">Adjacent to the Gajner Police Station.</p>
-      <p>📞+91 8851955753  ,  +91 8851955596</p>
-      <p>📧 snsmv25@gmail.com</p>
-    </div>
-
-    <!-- Social Media -->
-    <!-- Social Media -->
-      <div class="footer-col">
-        <h3>Follow Us</h3>
-        <div class="social-links">
-
-          <a href="https://www.facebook.com/Sw.NarendraSinghMahavidyalaya">🌐 Facebook</a>
-          <a href="https://www.instagram.com/swnarendrasinghmahavidyalaya?igsh=MXNuYjhtcmgwZTk0dg==">📸 Instagram</a><span>
-            <div></div>
-          </span>
-          <a href="https://www.linkedin.com/in/sw-narendra-singh-mahavidyalaya-35a842380/">💼 LinkedIn</a>
-          <a href="https://youtube.com/@snsmv?si=lhWDf7UR4A5-b36l">▶️ YouTube</a>
-        </div>
+      <div class="footer-col contact-info">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-location-dot"></i>Sw. Narendra Singh Mahavidyalaya, Gajner, Kanpur Dehat. </p>
+        <p>Adjacent to the Gajner Police Station.</p>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+918851955753">+91 8851955753</a><a
+            href="tel:+918851955596">+91 8851955596</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:snsmv25@gmail.com">snsmv25@gmail.com</a></p>
       </div>
 
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 Sw. Narendra Singh Mahavidyalaya | All Rights Reserved</p>
-  </div>
-</footer>
-<script src="js/common.js"></script> 
-</body>
-</html>
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="footer-col social-media-icons">
 
+          <a href="https://www.facebook.com/Sw.NarendraSinghMahavidyalaya" class="social-icon"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://youtube.com/@snsmv?si=lhWDf7UR4A5-b36l" class="social-icon"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/swnarendrasinghmahavidyalaya?igsh=MXNuYjhtcmgwZTk0dg=="
+            class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copyright-container">
+        <p>&copy; 2023 Sw. Narendra Singh Mahavidyalaya. All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+  <script src="js/common.js"></script>
+</body>
+
+</html>

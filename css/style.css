@@ -167,6 +167,9 @@ ul.menu li:hover > ul {
   ul.menu li ul li a {
     padding: 10px;
   }
+  .hero-img{
+    margin-top; 100px;
+  }
 
 }
 
@@ -627,4 +630,5 @@ form{
 
 h3{
   color: rgb(252, 232, 8);
+
 }

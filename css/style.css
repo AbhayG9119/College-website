@@ -43,7 +43,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 1100; /* Increased z-index to ensure navbar stays above marquee */
 }
 
 .logo-title {
@@ -168,7 +168,7 @@ ul.menu li:hover > ul {
     padding: 10px;
   }
   .hero-img{
-    margin-top; 100px;
+    margin-top: 100px;
   }
 
 }
@@ -630,5 +630,4 @@ form{
 
 h3{
   color: rgb(252, 232, 8);
-
 }
